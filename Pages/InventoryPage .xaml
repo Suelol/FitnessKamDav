@@ -1,0 +1,22 @@
+﻿<Page x:Class="FitnessOsnova_Kam_Dav.Pages.InventoryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="InventoryPage">
+
+    <Grid>
+        <!-- Список инвентаря -->
+        <ListView x:Name="InventoryListView" HorizontalAlignment="Left" Height="200" Margin="10,10,0,0" VerticalAlignment="Top" Width="400">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Название инвентаря" DisplayMemberBinding="{Binding ItemName}" />
+                    <GridViewColumn Header="Количество" DisplayMemberBinding="{Binding Quantity}" />
+                    <GridViewColumn Header="Состояние" DisplayMemberBinding="{Binding Condition}" />
+                    <GridViewColumn Header="Дата последнего обслуживания" DisplayMemberBinding="{Binding LastMaintenanceDate}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!-- Кнопка назад -->
+        <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="30" Margin="10,220,0,0" Click="Back_Click" />
+    </Grid>
+</Page>

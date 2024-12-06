@@ -1,0 +1,41 @@
+﻿<Page x:Class="FitnessOsnova_Kam_Dav.Pages.FeedbackPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Отзывы">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock FontSize="24" FontWeight="Bold" Text="Отзывы" Margin="0,0,0,20"/>
+            <ListView Name="FeedbackListView" Margin="0,0,0,20">
+                <!-- Здесь будут отображаться отзывы -->
+            </ListView>
+            <StackPanel Margin="0,0,0,10">
+                <TextBox Name="CommentTextBox" Height="100" Margin="0,0,0,0"/>
+                <TextBlock Text="Ваш отзыв..." Foreground="Gray" 
+                           VerticalAlignment="Center" 
+                           Margin="5,0,0,0" 
+                           />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Оценка:" VerticalAlignment="Center"/>
+                <ItemsControl Name="RatingStars" Margin="5,0,0,0">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Content="★" FontSize="24" 
+                                    Background="Transparent" 
+                                    Foreground="Gray" 
+                                    Click="StarButton_Click" 
+                                    Tag="{Binding}"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+            <Button Content="Добавить отзыв" Click="AddFeedbackButton_Click" 
+                    Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Page>

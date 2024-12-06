@@ -1,0 +1,49 @@
+﻿<Page x:Class="FitnessOsnova_Kam_Dav.Pages.UserProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Профиль пользователя">
+    <Grid Background="#F5F5F5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Профиль пользователя" FontSize="24" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="20"/>
+
+        <Border Grid.Row="1" Margin="20" Background="White" 
+                Padding="20" CornerRadius="10" VerticalAlignment="Top">
+            <StackPanel>
+                <TextBlock Text="Имя:" FontWeight="Bold"/>
+                <TextBlock x:Name="NameTextBlock" FontSize="16" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Фамилия:" FontWeight="Bold"/>
+                <TextBlock x:Name="SurnameTextBlock" FontSize="16" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Email:" FontWeight="Bold"/>
+                <TextBlock x:Name="EmailTextBlock" FontSize="16" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Телефон:" FontWeight="Bold"/>
+                <TextBlock x:Name="PhoneTextBlock" FontSize="16" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Дата регистрации:" FontWeight="Bold"/>
+                <TextBlock x:Name="RegistrationDateTextBlock" FontSize="16" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Цели:" FontWeight="Bold"/>
+                <TextBlock x:Name="GoalsTextBlock" FontSize="16" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Предпочтения:" FontWeight="Bold"/>
+                <TextBlock x:Name="PreferencesTextBlock" FontSize="16" Margin="0,0,0,10"/>
+                
+                <TextBlock Text="Абонемент:" FontWeight="Bold"/>
+                <TextBlock x:Name="MemberBlockText" FontSize="16" Margin="0,0,0,10"/>
+
+                <Button Content="Редактировать профиль" Click="EditProfileButton_Click" 
+                        Margin="0,20,0,0" Width="200" HorizontalAlignment="Center"/>
+                
+                <Button Content="Назад" Click="Back_Click" 
+                        Margin="0,20,0,0" Width="200" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

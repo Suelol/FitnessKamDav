@@ -1,0 +1,19 @@
+﻿<Page x:Class="FitnessOsnova_Kam_Dav.Pages.FinancialTransactionsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Финансовые транзакции">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock FontSize="24" FontWeight="Bold" Text="Финансовые транзакции" Margin="0,0,0,20"/>
+            <ListView Name="TransactionsListView">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding TransactionDate}"/>
+                        <GridViewColumn Header="Сумма" DisplayMemberBinding="{Binding Amount}"/>
+                        <GridViewColumn Header="Тип" DisplayMemberBinding="{Binding TransactionType}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Page>
